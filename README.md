@@ -35,6 +35,7 @@ Build a Book catalogue microservice that allows consumer to do the following:
 - Open the browser and enter http://localhost:8080/cba-books/swagger-ui.html
 - You can test API in Swagger or Post Man (install only if required)
 
+
 **To Create Book** 
 - Endpoint: http://localhost:8080/cba-books/createBook
 - Input below JSON Request Object and click on 'Try it out'. Success Response will be returned. 
@@ -49,9 +50,11 @@ Build a Book catalogue microservice that allows consumer to do the following:
   "title": "Think Positive - Success is yours!"
 }
 
+
 **To Update a book**:
 - Endpoint: http://localhost:8080/cba-books/updateBook
 - Lets update published date on the book that we have created & click Try. Yes - now book is updated!!
+
  {
   "authors": [
     "William", "Gerald"
