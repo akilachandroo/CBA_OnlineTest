@@ -38,7 +38,10 @@ Build a Book catalogue microservice that allows consumer to do the following:
 
 **To Create Book** 
 - Endpoint: http://localhost:8080/cba-books/createBook
-- Input below JSON Request Object and click on 'Try it out'. Success Response will be returned. 
+- Request Method: POST
+- Input: JSON
+- Output: JSON
+- Input below JSON Request Object and click on 'Try it out'. Success Response will be returned as JSON. 
 - On the same request, remove "title" and click 'Try it out' - Error Response will be retured - as title is mandatory parameter for a book instance.
 - Request JSON:
  {
@@ -53,7 +56,10 @@ Build a Book catalogue microservice that allows consumer to do the following:
 
 **To Update a book**:
 - Endpoint: http://localhost:8080/cba-books/updateBook
-- Lets update published date on the book that we have created & click Try. Yes - now book is updated!!
+- Request Method: PUT
+- Input: JSON
+- Output: JSON
+- Lets update published date on the book that we have created & click Try. Yes - now book is updated and response will be JSON book object.
 
  {
   "authors": [
@@ -66,8 +72,14 @@ Build a Book catalogue microservice that allows consumer to do the following:
 
 **Get Books by Title or Author or ISBN and see the details** 
 - Endpoint: http://localhost:8080/cba-books/getBooks/Think
-- Enter value as "Think" and hit Try - book details will be retrieved. 
+- Request Method: GET
+- Input: Text
+- Output: JSON
+- Enter value as "Think" and hit Try - book details will be retrieved - book(s) objects. 
  
 **Delete a book by its Title**
-- Endpoint : http://localhost:8080/cba-books/deleteBook/Think
-- Enter value as "Think" and hit Try - book is deleted now from Catalogue 
+- Endpoint : http://localhost:8080/cba-books/deleteBook/Think 
+- Request Method: DELETE
+- Input: Text 
+- Output: Text     
+- Enter value as "Think" and hit Try - book is deleted now from Catalogue.
