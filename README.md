@@ -12,6 +12,7 @@ Build a Book catalogue microservice that allows consumer to do the following:
 **Solution**
 - Microservice developed in Spring Boot with CRUD Operations: POST, GET, PUT and DELETE
 - Junit Test cases added for Controller to test all the operations.
+- Swagger API documentation added
 
 **Prerequisites**:
    - Install Java 1.8 JDK
@@ -33,7 +34,9 @@ Build a Book catalogue microservice that allows consumer to do the following:
 - Open the browser and enter http://localhost:8080/cba-books/swagger-ui.html
 - You can test API in Swagger or Post Man (install only if required)
 
-**To Create Book** : Provide below JSON Request Object sample and click on Try it out. You can see sample success response. On the same request, you can remove "title" and check - you will be surprised - Request is rejected now - as title is required for a book :) (http://localhost:8080/cba-books/createBook)
+**To Create Book** : 
+Provide below JSON Request Object sample and click on Try it out. You can see sample success response. 
+On the same request, you can remove "title" and check - you will be surprised - Request is rejected now - as title is required for a book :) (http://localhost:8080/cba-books/createBook)
  {
   "authors": [
     "William", "Gerald"
@@ -43,7 +46,8 @@ Build a Book catalogue microservice that allows consumer to do the following:
   "title": "Think Positive - Success is yours!"
 }
 
-**To Update a book** - Lets update published date on the book that we have created & click Try. Yes - now book is updated!! (http://localhost:8080/cba-books/updateBook)
+**To Update a book**:
+Lets update published date on the book that we have created & click Try. Yes - now book is updated!! (http://localhost:8080/cba-books/updateBook)
  {
   "authors": [
     "William", "Gerald"
