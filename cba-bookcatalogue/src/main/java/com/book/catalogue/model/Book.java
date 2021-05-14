@@ -3,12 +3,12 @@
  */
 package com.book.catalogue.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.ISBN;
 import org.hibernate.validator.constraints.ISBN.Type;
@@ -60,7 +60,9 @@ public class Book {
 	 * @return the authors
 	 */
 	public List<String> getAuthors() {
-
+		if(authors == null || authors.isEmpty()) {
+			authors = new ArrayList<String>();
+		}
 		return authors;
 	}
 

@@ -1,5 +1,10 @@
 package com.book.catalogue.exception;
 
+/**
+ * Class provides generic model of errorCode and message
+ * @author Akila
+ *
+ */
 public class ErrorResponse {
 	private int errorCode;
 	private String message;

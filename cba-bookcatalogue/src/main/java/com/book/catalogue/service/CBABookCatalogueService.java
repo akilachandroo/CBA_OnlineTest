@@ -37,8 +37,7 @@ public class CBABookCatalogueService {
 	 * @param book
 	 * @return book Book
 	 */
-	public Book createBook(Book bookObj) {
-
+	public Book createBook(Book bookObj) {		
 		List<Book> matchingBooks = books.values().stream()
 				.filter(book -> book.getTitle().equalsIgnoreCase(bookObj.getTitle())).collect(Collectors.toList());
 		if (matchingBooks.isEmpty()) {
@@ -98,6 +97,8 @@ public class CBABookCatalogueService {
 							|| book.getTitle().toLowerCase().contains(value.toLowerCase())
 							|| String.join(",", book.getAuthors()).toLowerCase().contains(value.toLowerCase()))
 					.collect(Collectors.toList());
+			
+			
 			// matchingBooks.forEach(book -> message.append(book.toString()).append("\n"));
 			// This is required if you want response in a String format.
 		}
