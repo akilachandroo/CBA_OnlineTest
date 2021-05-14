@@ -13,6 +13,7 @@ Build a Book catalogue microservice that allows consumer to do the following:
 - Microservice developed in Spring Boot with CRUD Operations: POST, GET, PUT and DELETE
 - Junit Test cases added for Controller to test all the operations.
 - Swagger API documentation added
+- Log available in C:\BookCatalogue.log
 
 **Prerequisites**:
    - Install Java 1.8 JDK
@@ -34,9 +35,11 @@ Build a Book catalogue microservice that allows consumer to do the following:
 - Open the browser and enter http://localhost:8080/cba-books/swagger-ui.html
 - You can test API in Swagger or Post Man (install only if required)
 
-**To Create Book** : 
-Provide below JSON Request Object sample and click on Try it out. You can see sample success response. 
-On the same request, you can remove "title" and check - you will be surprised - Request is rejected now - as title is required for a book :) (http://localhost:8080/cba-books/createBook)
+**To Create Book** 
+- Endpoint: http://localhost:8080/cba-books/createBook
+- Input below JSON Request Object and click on 'Try it out'. Success Response will be returned. 
+- On the same request, remove "title" and click 'Try it out' - Error Response will be retured - as title is mandatory parameter for a book instance.
+- Request JSON:
  {
   "authors": [
     "William", "Gerald"
@@ -47,7 +50,8 @@ On the same request, you can remove "title" and check - you will be surprised - 
 }
 
 **To Update a book**:
-Lets update published date on the book that we have created & click Try. Yes - now book is updated!! (http://localhost:8080/cba-books/updateBook)
+- Endpoint: http://localhost:8080/cba-books/updateBook
+- Lets update published date on the book that we have created & click Try. Yes - now book is updated!!
  {
   "authors": [
     "William", "Gerald"
@@ -58,8 +62,9 @@ Lets update published date on the book that we have created & click Try. Yes - n
 }
 
 **Get Books by Title or Author or ISBN and see the details** 
-- Enter value as "Think" and hit Try - your book details will be retrieved. (http://localhost:8080/cba-books/getBooks/Think)
+- Endpoint: http://localhost:8080/cba-books/getBooks/Think
+- Enter value as "Think" and hit Try - book details will be retrieved. 
  
 **Delete a book by its Title**
-- Enter value as "Think" and hit Try - your book is deleted now from Catalogue (http://localhost:8080/cba-books/deleteBook/Think)
-
+- Endpoint : http://localhost:8080/cba-books/deleteBook/Think
+- Enter value as "Think" and hit Try - book is deleted now from Catalogue 
